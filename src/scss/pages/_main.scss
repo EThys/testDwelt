@@ -1,0 +1,19 @@
+// Un mixin pour gérer les animations cross-browser
+@mixin animation($name, $duration, $iteration: infinite, $direction: alternate, $fill: forwards) {
+  -webkit-animation: $name $duration;
+  animation: $name $duration;
+
+  -webkit-animation-iteration-count: $iteration;
+  animation-iteration-count: $iteration;
+
+  -webkit-animation-direction: $direction;
+  animation-direction: $direction;
+
+  -webkit-animation-fill-mode: $fill;
+  animation-fill-mode: $fill;
+}
+
+.back {
+  background-size: cover;
+  @include animation(slidein, 100s);
+}
