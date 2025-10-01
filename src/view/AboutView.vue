@@ -69,20 +69,20 @@ onMounted(() => {
   <Header/>
 
   <!-- Hero Section -->
-  <div class="relative w-full h-80 md:h-96 lg:h-[500px] overflow-hidden">
+  <div class="relative  w-full h-80 md:h-96 lg:h-[500px] overflow-hidden">
     <div class="absolute inset-0">
       <img 
         :src=home_008 
         alt="DWELT - Votre partenaire immobilier de confiance"
         class="w-full h-full object-cover"
       />
-      <div class="absolute inset-0 bg-gradient-to-r from-[#1a5f5f]/80 to-[#329393]/60"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#1a5f5f]/80 to-[#2F4F4F]/60"></div>
     </div>
     
     <div class="relative z-10 flex items-center justify-center h-full px-4 text-center">
       <div class="max-w-4xl scroll-animate">
         <h1 class="text-white text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-title">
-          À propos de <span class="text-[#FFD166]">DWELT</span>
+          À propos de <span class="text-white">DWELT</span>
         </h1>
         <p class="text-white text-xl lg:text-2xl font-light max-w-3xl mx-auto animate-subtitle">
           Votre partenaire de confiance pour une expérience immobilière exceptionnelle
@@ -97,13 +97,13 @@ onMounted(() => {
     <div class="absolute bottom-0 right-0 w-80 h-80 bg-[#FFD166]/10 rounded-full translate-x-1/2 translate-y-1/2 animate-pulse delay-1000"></div>
     
     <div class="absolute top-1/4 right-20 w-3 h-3 bg-[#1a5f5f]/30 rounded-full animate-bounce"></div>
-    <div class="absolute bottom-1/3 left-16 w-2 h-2 bg-[#329393]/30 rounded-full animate-bounce delay-500"></div>
+    <div class="absolute bottom-1/3 left-16 w-2 h-2 bg-[#2F4F4F]/30 rounded-full animate-bounce delay-500"></div>
 
     <div class="max-w-6xl mx-auto relative z-10">
       <!-- En-tête avec animation -->
       <div class="text-center mb-20 transform transition-all duration-500 hover:scale-105 scroll-animate">
         <div class="inline-flex items-center space-x-3 mb-6">
-          <div class="w-1 h-8 bg-gradient-to-b from-[#1a5f5f] to-[#329393] rounded-full"></div>
+          <div class="w-1 h-8 bg-gradient-to-b from-[#1a5f5f] to-[#2F4F4F] rounded-full"></div>
           <span class="text-sm font-medium tracking-widest text-[#1a5f5f] uppercase bg-[#1a5f5f]/5 px-4 py-2 rounded-full">
             Notre Identité
           </span>
@@ -126,7 +126,7 @@ onMounted(() => {
               </svg>
             </div>
             <p class="text-lg text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors duration-300">
-              <span class="font-medium text-[#1a5f5f]">DWELT</span> n'est pas qu'un nom, c'est une promesse. Issu de <span class="text-[#329393] font-medium">"Demeure"</span>, <span class="text-[#329393] font-medium">"Welcoming"</span> et <span class="text-[#329393] font-medium">"Living"</span>, notre nom incarne notre vision de créer des lieux où l'on se sent véritablement chez soi.
+              <span class="font-medium text-[#1a5f5f]">DWELT</span> n'est pas qu'un nom, c'est une promesse. Issu de <span class="text-[#2F4F4F] font-medium">"Demeure"</span>, <span class="text-[#2F4F4F] font-medium">"Welcoming"</span> et <span class="text-[#2F4F4F] font-medium">"Living"</span>, notre nom incarne notre vision de créer des lieux où l'on se sent véritablement chez soi.
             </p>
           </div>
 
@@ -163,13 +163,13 @@ onMounted(() => {
                 <span class="text-sm font-medium text-gray-900 group-hover:text-[#1a5f5f] transition-colors duration-300">Confiance</span>
               </div>
               
-              <div class="group flex items-center space-x-3 p-4 bg-gray-50 hover:bg-white rounded-xl border border-gray-200 hover:border-[#329393] shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 delay-150">
-                <div class="w-10 h-10 bg-[#329393] rounded-lg flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+              <div class="group flex items-center space-x-3 p-4 bg-gray-50 hover:bg-white rounded-xl border border-gray-200 hover:border-[#2F4F4F] shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 delay-150">
+                <div class="w-10 h-10 bg-[#2F4F4F] rounded-lg flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
                   <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <span class="text-sm font-medium text-gray-900 group-hover:text-[#329393] transition-colors duration-300">Innovation</span>
+                <span class="text-sm font-medium text-gray-900 group-hover:text-[#2F4F4F] transition-colors duration-300">Innovation</span>
               </div>
             </div>
           </div>
@@ -242,7 +242,7 @@ onMounted(() => {
         </div>
         
         <div class="order-1 lg:order-2 scroll-animate delay-100">
-          <span class="inline-block bg-[#329393] text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+          <span class="inline-block bg-[#2F4F4F] text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
             Notre engagement
           </span>
           <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
@@ -266,7 +266,7 @@ onMounted(() => {
   </section>
 
   <!-- Nos valeurs -->
-  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#1a5f5f] to-[#329393] text-white">
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#1a5f5f] to-[#2F4F4F] text-white">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-12 scroll-animate">
         <span class="inline-block bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4 backdrop-blur-md">
@@ -328,7 +328,7 @@ onMounted(() => {
   <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-12 scroll-animate">
-        <span class="inline-block bg-[#329393] text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+        <span class="inline-block bg-[#2F4F4F] text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
           L'équipe dirigeante
         </span>
         <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
@@ -399,7 +399,7 @@ onMounted(() => {
     <div class="max-w-6xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div class="scroll-animate">
-          <span class="inline-block bg-[#329393] text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+          <span class="inline-block bg-[#2F4F4F] text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
             Notre différence
           </span>
           <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
@@ -461,7 +461,7 @@ onMounted(() => {
   <section id="services" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-12 scroll-animate">
-        <span class="inline-block bg-[#329393] text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+        <span class="inline-block bg-[#2F4F4F] text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
           Nos solutions
         </span>
         <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
@@ -473,7 +473,7 @@ onMounted(() => {
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-100 hover:border-[#329393]/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 scroll-animate">
+        <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-100 hover:border-[#2F4F4F]/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 scroll-animate">
           <div class="w-14 h-14 bg-[#1a5f5f] rounded-xl flex items-center justify-center mb-4">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
@@ -483,7 +483,7 @@ onMounted(() => {
           <p class="text-gray-600">Mettez en valeur votre propriété avec des aménagements virtuels personnalisés.</p>
         </div>
         
-        <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-100 hover:border-[#329393]/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 scroll-animate delay-100">
+        <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-100 hover:border-[#2F4F4F]/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 scroll-animate delay-100">
           <div class="w-14 h-14 bg-[#1a5f5f] rounded-xl flex items-center justify-center mb-4">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
@@ -493,7 +493,7 @@ onMounted(() => {
           <p class="text-gray-600">Vivez une expérience immersive unique de votre futur logement.</p>
         </div>
         
-        <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-100 hover:border-[#329393]/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 scroll-animate delay-200">
+        <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-100 hover:border-[#2F4F4F]/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 scroll-animate delay-200">
           <div class="w-14 h-14 bg-[#1a5f5f] rounded-xl flex items-center justify-center mb-4">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
@@ -503,7 +503,7 @@ onMounted(() => {
           <p class="text-gray-600">Visualisez votre espace avec des plans détaillés et réalistes.</p>
         </div>
         
-        <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-100 hover:border-[#329393]/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 scroll-animate delay-300">
+        <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-100 hover:border-[#2F4F4F]/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 scroll-animate delay-300">
           <div class="w-14 h-14 bg-[#1a5f5f] rounded-xl flex items-center justify-center mb-4">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2 2V9z"/>
@@ -514,7 +514,7 @@ onMounted(() => {
           <p class="text-gray-600">Visualisez les possibilités de rénovation avant de vous lancer.</p>
         </div>
         
-        <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-100 hover:border-[#329393]/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 scroll-animate delay-400">
+        <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-100 hover:border-[#2F4F4F]/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 scroll-animate delay-400">
           <div class="w-14 h-14 bg-[#1a5f5f] rounded-xl flex items-center justify-center mb-4">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
@@ -524,7 +524,7 @@ onMounted(() => {
           <p class="text-gray-600">Explorez différentes options architecturales pour votre projet.</p>
         </div>
         
-        <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-100 hover:border-[#329393]/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 scroll-animate delay-500">
+        <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-100 hover:border-[#2F4F4F]/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 scroll-animate delay-500">
           <div class="w-14 h-14 bg-[#1a5f5f] rounded-xl flex items-center justify-center mb-4">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
@@ -540,7 +540,7 @@ onMounted(() => {
   <FooterComponent/>
 
   <!-- CTA Final -->
-  <!-- <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#1a5f5f] to-[#329393] text-white">
+  <!-- <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#1a5f5f] to-[#2F4F4F] text-white">
     <div class="max-w-4xl mx-auto text-center scroll-animate">
       <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
         Prêt à concrétiser votre projet immobilier ?

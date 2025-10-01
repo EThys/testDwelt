@@ -105,7 +105,7 @@ onMounted(() => {
         
         <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
           Questions
-          <span class="text-[#329393]">
+          <span class="text-[#2F4F4F]">
             Fréquentes
           </span>
         </h2>
@@ -125,10 +125,10 @@ onMounted(() => {
               v-model="searchQuery"
               type="text"
               placeholder="Rechercher une question..."
-              class="w-full pl-12 pr-6 py-4 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl shadow-sm focus:ring-2 focus:ring-[#329393]/20 focus:border-[#329393] transition-all duration-300 text-lg placeholder-gray-400"
+              class="w-full pl-12 pr-6 py-4 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl shadow-sm focus:ring-2 focus:ring-[#2F4F4F]/20 focus:border-[#2F4F4F] transition-all duration-300 text-lg placeholder-gray-400"
             >
             <div class="absolute left-4 top-1/2 -translate-y-1/2">
-              <svg class="w-5 h-5 text-gray-400 group-focus-within:text-[#329393] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-5 h-5 text-gray-400 group-focus-within:text-[#2F4F4F] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
               </svg>
             </div>
@@ -150,7 +150,7 @@ onMounted(() => {
           v-for="(item, index) in filteredItems"
           :key="item.id"
           :id="`faq-${item.id}`"
-          class="group bg-white/80 backdrop-blur-sm border border-gray-200/80 rounded-2xl hover:border-[#329393]/50 transition-all duration-500 shadow-sm hover:shadow-xl overflow-hidden"
+          class="group bg-white/80 backdrop-blur-sm border border-gray-200/80 rounded-2xl hover:border-[#2F4F4F]/50 transition-all duration-500 shadow-sm hover:shadow-xl overflow-hidden"
           :style="{ 
             animationDelay: `${index * 0.1}s`,
             animation: animatedItems[index] ? 'slideInUp 0.6s ease-out forwards' : 'none'
@@ -158,22 +158,22 @@ onMounted(() => {
         >
           <button
             @click="toggleItem(item.id)"
-            class="w-full px-6 py-6 text-left focus:outline-none focus:ring-3 focus:ring-[#329393]/20 rounded-2xl"
+            class="w-full px-6 py-6 text-left focus:outline-none focus:ring-3 focus:ring-[#2F4F4F]/20 rounded-2xl"
             :aria-expanded="activeItem === item.id"
             :disabled="isLoading"
           >
             <div class="flex items-start justify-between gap-4">
               <div class="flex items-start gap-4 flex-1 min-w-0">
                 <!-- Icon Container -->
-                <div class="flex-shrink-0 w-12 h-12 bg-[#329393]/10 rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
-                  <div class="w-3 h-3 bg-[#329393] rounded-full"></div>
+                <div class="flex-shrink-0 w-12 h-12 bg-[#2F4F4F]/10 rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
+                  <div class="w-3 h-3 bg-[#2F4F4F] rounded-full"></div>
                 </div>
 
                 <!-- Content -->
                 <div class="flex-1 min-w-0">
                   <div class="flex items-center gap-3 mb-2">
                     <!-- Popular Badge -->
-                    <span v-if="item.isPopular" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#329393] text-white rounded-lg text-xs font-semibold shadow-sm">
+                    <span v-if="item.isPopular" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#2F4F4F] text-white rounded-lg text-xs font-semibold shadow-sm">
                       <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
                       </svg>
@@ -198,7 +198,7 @@ onMounted(() => {
                   :class="[
                     'w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-500 shadow-sm group-hover:shadow-md',
                     activeItem === item.id 
-                      ? 'bg-[#329393] text-white transform rotate-180' 
+                      ? 'bg-[#2F4F4F] text-white transform rotate-180' 
                       : 'bg-gray-100 text-gray-600 group-hover:bg-gray-200'
                   ]"
                 >
@@ -222,7 +222,7 @@ onMounted(() => {
           >
             <div class="px-6 pb-8 border-t border-gray-100/50">
               <div class="pt-6 text-gray-700 leading-relaxed text-lg flex items-start gap-4">
-                <div class="flex-shrink-0 w-2 h-2 mt-3 bg-[#329393] rounded-full animate-pulse"></div>
+                <div class="flex-shrink-0 w-2 h-2 mt-3 bg-[#2F4F4F] rounded-full animate-pulse"></div>
                 <p class="flex-1">{{ item.answer }}</p>
               </div>
               
@@ -244,7 +244,7 @@ onMounted(() => {
           <p class="text-gray-600 mb-8 text-lg">Essayez d'autres termes de recherche ou une autre catégorie</p>
           <button 
             @click="resetFilters"
-            class="inline-flex items-center gap-3 px-6 py-3 bg-[#329393] text-white rounded-xl hover:bg-[#2a7a7a] font-semibold transition-all transform hover:scale-105 shadow-lg"
+            class="inline-flex items-center gap-3 px-6 py-3 bg-[#2F4F4F] text-white rounded-xl hover:bg-[#2a7a7a] font-semibold transition-all transform hover:scale-105 shadow-lg"
           >
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
@@ -359,7 +359,7 @@ html {
 
 /* Amélioration de l'accessibilité */
 button:focus-visible {
-  outline: 2px solid #329393;
+  outline: 2px solid #2F4F4F;
   outline-offset: 2px;
   border-radius: 8px;
 }

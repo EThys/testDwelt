@@ -234,7 +234,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100/50">
+  <div class="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100/50 py-10 lg:py-1.5">
 
     <Header/>
 
@@ -246,13 +246,13 @@ onMounted(() => {
           alt="DWELT - Votre partenaire immobilier de confiance"
           class="w-full h-full object-cover"
         />
-        <div class="absolute inset-0 bg-gradient-to-r from-[#1a5f5f]/80 to-[#329393]/60"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-[#1a5f5f]/80 to-[#2F4F4F]/60"></div>
       </div>
       
       <div class="relative z-10 flex items-center justify-center h-full px-4 text-center">
         <div class="max-w-4xl scroll-animate">
           <h1 class="text-white text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-title">
-              Nos Services <span class="text-[#FFD166]">immobiliers</span>
+              Nos Services <span class="text-white">immobiliers</span>
           </h1>
           <p class="text-white text-xl lg:text-2xl font-light max-w-3xl mx-auto animate-subtitle">
               Découvrez l'ensemble de nos services conçus pour accompagner chaque étape de votre projet immobilier avec expertise et innovation technologique.
@@ -273,7 +273,7 @@ onMounted(() => {
             :class="[
               'px-6 py-3 rounded-full cursor-pointer font-medium transition-all duration-500 transform hover:-translate-y-1',
               activeCategory === category.id 
-                ? 'bg-gradient-to-r from-[#1a5f5f] to-[#329393] text-white shadow-xl scale-105' 
+                ? 'bg-gradient-to-r from-[#1a5f5f] to-[#2F4F4F] text-white shadow-xl scale-105' 
                 : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200 hover:border-[#1a5f5f]/30 shadow-lg hover:shadow-xl'
             ]"
           >
@@ -304,7 +304,7 @@ onMounted(() => {
               <!-- En-tête avec icône -->
               <div class="flex items-center justify-between mb-4">
                 <div class="relative">
-                  <div class="w-12 h-12 bg-gradient-to-br from-[#1a5f5f] to-[#329393] rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div class="w-12 h-12 bg-gradient-to-br from-[#1a5f5f] to-[#2F4F4F] rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                     <component :is="service.icon" class="w-6 h-6 text-white" />
                   </div>
                 </div>
@@ -315,7 +315,7 @@ onMounted(() => {
               
               <!-- Contenu texte principal -->
               <div class="mb-4">
-                <h3 class="text-xl font-bold text-white mb-2 leading-tight group-hover:text-[#FFD166] transition-colors duration-300">
+                <h3 class="text-xl font-bold text-white mb-2 leading-tight group-hover:text-[#2f4f4f] transition-colors duration-300">
                   {{ service.title }}
                 </h3>
                 <p class="text-white/90 leading-relaxed text-sm line-clamp-3 mb-3">
@@ -328,7 +328,7 @@ onMounted(() => {
                     <span v-for="(tag, tagIndex) in service.tags.slice(0, 2)" :key="tag" 
                       class="inline-flex items-center gap-1 bg-white/20 backdrop-blur-sm text-white px-2.5 py-1.5 rounded-full text-xs font-medium border border-white/30 transition-all duration-300 transform hover:scale-105"
                       :style="{ transitionDelay: `${tagIndex * 50}ms` }">
-                      <svg class="w-3 h-3 text-[#FFD166] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <svg class="w-3 h-3 text-[#2f4f4f] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                       </svg>
                       <span class="truncate max-w-[80px]">{{ tag }}</span>
@@ -352,7 +352,7 @@ onMounted(() => {
       <!-- Éléments décoratifs de fond -->
       <div class="absolute inset-0 opacity-5">
         <div class="absolute top-10 left-10 w-72 h-72 bg-[#1a5f5f] rounded-full blur-3xl"></div>
-        <div class="absolute bottom-10 right-10 w-96 h-96 bg-[#329393] rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-[#2F4F4F] rounded-full blur-3xl"></div>
       </div>
       
       <div class="relative z-10 max-w-6xl mx-auto">
@@ -372,7 +372,7 @@ onMounted(() => {
               <div v-for="(feature, index) in achatVenteFeatures" :key="feature.id" 
                    class="flex items-start space-x-6 group transform hover:-translate-y-2 transition-all duration-500 p-6 rounded-2xl hover:bg-white/80 backdrop-blur-sm border border-white/50 shadow-lg hover:shadow-xl"
                    :style="{ animationDelay: `${index * 150}ms` }">
-                <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#1a5f5f] to-[#329393] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl">
+                <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#1a5f5f] to-[#2F4F4F] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl">
                   <component :is="feature.icon" class="w-8 h-8 text-white" />
                 </div>
                 <div class="flex-1">
@@ -394,7 +394,7 @@ onMounted(() => {
                 <div class="absolute inset-0 bg-gradient-to-t from-[#1a5f5f]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
               <div class="absolute -bottom-6 -right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl transform hover:scale-105 transition-all duration-500 border border-[#1a5f5f]/10">
-                <p class="text-3xl font-bold bg-gradient-to-r from-[#1a5f5f] to-[#329393] bg-clip-text text-transparent mb-2">500+</p>
+                <p class="text-3xl font-bold bg-gradient-to-r from-[#1a5f5f] to-[#2F4F4F] bg-clip-text text-transparent mb-2">500+</p>
                 <p class="text-sm font-medium text-gray-600">Transactions réussies</p>
                 <div class="flex mt-2">
                   <svg v-for="i in 5" :key="i" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -413,7 +413,7 @@ onMounted(() => {
       <!-- Éléments décoratifs de fond -->
       <div class="absolute inset-0 opacity-10">
         <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-[#FFD166] rounded-full blur-3xl"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#329393] rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#2F4F4F] rounded-full blur-3xl"></div>
       </div>
       
       <div class="relative z-10 max-w-6xl mx-auto">
@@ -438,7 +438,7 @@ onMounted(() => {
                 {{ index + 1 }}
               </div>
             </div>
-            <h3 class="text-xl font-bold text-white mb-4 group-hover:text-[#FFD166] transition-colors duration-300">
+            <h3 class="text-xl font-bold text-white mb-4 group-hover:text-[#2F4F4F] transition-colors duration-300">
               {{ tech.title }}
             </h3>
             <p class="text-gray-300 text-base leading-relaxed">{{ tech.description }}</p>
@@ -460,7 +460,7 @@ onMounted(() => {
           </p>
         </div>
         
-        <div class="bg-gradient-to-br from-[#1a5f5f] to-[#329393] rounded-3xl p-12 text-white shadow-2xl transform hover:scale-[1.01] transition-transform duration-700 relative overflow-hidden">
+        <div class="bg-gradient-to-br from-[#1a5f5f] to-[#2F4F4F] rounded-3xl p-12 text-white shadow-2xl transform hover:scale-[1.01] transition-transform duration-700 relative overflow-hidden">
           <!-- Éléments décoratifs -->
           <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-32 translate-x-32"></div>
           <div class="absolute bottom-0 left-0 w-80 h-80 bg-white/5 rounded-full translate-y-40 -translate-x-40"></div>
@@ -472,7 +472,7 @@ onMounted(() => {
               <div class="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 backdrop-blur-sm border border-white/20">
                 <component :is="service.icon" class="w-10 h-10 text-white" />
               </div>
-              <h3 class="text-2xl font-bold mb-4 group-hover:text-[#FFD166] transition-colors duration-300">{{ service.title }}</h3>
+              <h3 class="text-2xl font-bold mb-4 group-hover:text-[#2f4f4f] transition-colors duration-300">{{ service.title }}</h3>
               <p class="text-white/90 text-lg leading-relaxed">{{ service.description }}</p>
             </div>
           </div>

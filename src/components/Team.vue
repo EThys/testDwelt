@@ -1,15 +1,15 @@
 <template>
   <div class="bg-gradient-to-br from-gray-50 to-white py-24 sm:py-32 relative overflow-hidden">
     <!-- Éléments décoratifs -->
-    <div class="absolute top-0 left-0 w-72 h-72 bg-[#329393]/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-    <div class="absolute bottom-0 right-0 w-96 h-96 bg-[#329393]/5 rounded-full translate-x-1/3 translate-y-1/3"></div>
+    <div class="absolute top-0 left-0 w-72 h-72 bg-[#2F4F4F]/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-[#2F4F4F]/5 rounded-full translate-x-1/3 translate-y-1/3"></div>
     
     <div class="mx-auto max-w-7xl px-6 text-center lg:px-8 relative z-10">
       <!-- En-tête amélioré -->
       <div class="mx-auto max-w-3xl scroll-animate">
         <h2 class="text-4xl font-bold tracking-tight text-balance text-gray-900 sm:text-5xl lg:text-6xl">
           Rencontrez nos 
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#329393] to-[#05b1b1]">experts</span>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#2F4F4F] to-[#05b1b1]">experts</span>
         </h2>
         <p class="mt-6 text-xl/8 text-gray-600 max-w-2xl mx-auto scroll-animate delay-100">
           Une équipe d'agents passionnés dédiés à transformer vos rêves immobiliers en réalité
@@ -23,20 +23,20 @@
             :style="{ 'transition-delay': `${index * 150}ms` }">
           
           <!-- Élément décoratif avec effet de profondeur -->
-          <div class="absolute inset-0 bg-gradient-to-br from-[#329393]/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="absolute inset-0 bg-gradient-to-br from-[#2F4F4F]/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           
           <!-- Photo de profil avec cadre amélioré -->
           <div class="relative z-10">
             <div class="relative mx-auto w-40 h-40 mb-6 scroll-animate-image"
                  :style="{ 'transition-delay': `${index * 150 + 200}ms` }">
-              <div class="absolute inset-0 bg-gradient-to-r from-[#329393] to-[#05b1b1] rounded-full transform rotate-6 scale-105 group-hover:rotate-3 transition-transform duration-500"></div>
+              <div class="absolute inset-0 bg-gradient-to-r from-[#2F4F4F] to-[#05b1b1] rounded-full transform rotate-6 scale-105 group-hover:rotate-3 transition-transform duration-500"></div>
               <img
                 class="relative mx-auto size-40 rounded-full object-cover border-4 border-white shadow-lg"
                 :src="person.imageUrl"
                 :alt="person.name"
               />
               <!-- Badge d'expérience -->
-              <div class="absolute -bottom-2 -right-2 bg-gradient-to-r from-[#329393] to-[#05b1b1] text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg scroll-animate-badge"
+              <div class="absolute -bottom-2 -right-2 bg-gradient-to-r from-[#2F4F4F] to-[#05b1b1] text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg scroll-animate-badge"
                    :style="{ 'transition-delay': `${index * 150 + 300}ms` }">
                 Expert
               </div>
@@ -47,7 +47,7 @@
                 :style="{ 'transition-delay': `${index * 150 + 100}ms` }">
               {{ person.name }}
             </h3>
-            <p class="text-[#329393] font-medium mb-4 scroll-animate-text delay-100"
+            <p class="text-[#2F4F4F] font-medium mb-4 scroll-animate-text delay-100"
                :style="{ 'transition-delay': `${index * 150 + 150}ms` }">{{ person.role }}</p>
             
             <!-- Description complète visible -->
@@ -62,7 +62,7 @@
             <ul role="list" class="mt-8 flex justify-center gap-x-4 scroll-animate-social"
                 :style="{ 'transition-delay': `${index * 150 + 350}ms` }">
               <li>
-                <a :href="person.xUrl" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-gray-500 hover:bg-[#329393] hover:text-white transition-all duration-300 group/social">
+                <a :href="person.xUrl" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-gray-500 hover:bg-[#2F4F4F] hover:text-white transition-all duration-300 group/social">
                   <span class="sr-only">X</span>
                   <svg class="size-4 group-hover/social:scale-110 transition-transform" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M11.4678 8.77491L17.2961 2H15.915L10.8543 7.88256L6.81232 2H2.15039L8.26263 10.8955L2.15039 18H3.53159L8.87581 11.7878L13.1444 18H17.8063L11.4675 8.77491H11.4678ZM9.57608 10.9738L8.95678 10.0881L4.02925 3.03974H6.15068L10.1273 8.72795L10.7466 9.61374L15.9156 17.0075H13.7942L9.57608 10.9742V10.9738Z"/>
@@ -70,7 +70,7 @@
                 </a>
               </li>
               <li>
-                <a :href="person.linkedinUrl" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-gray-500 hover:bg-[#329393] hover:text-white transition-all duration-300 group/social">
+                <a :href="person.linkedinUrl" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-gray-500 hover:bg-[#2F4F4F] hover:text-white transition-all duration-300 group/social">
                   <span class="sr-only">LinkedIn</span>
                   <svg class="size-4 group-hover/social:scale-110 transition-transform" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/>
@@ -78,7 +78,7 @@
                 </a>
               </li>
               <li>
-                <a :href="person.contactUrl" class="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-[#329393] to-[#05b1b1] text-white hover:shadow-lg transition-all duration-300 group/social">
+                <a :href="person.contactUrl" class="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-[#2F4F4F] to-[#05b1b1] text-white hover:shadow-lg transition-all duration-300 group/social">
                   <span class="sr-only">Contact</span>
                   <svg class="size-4 group-hover/social:scale-110 transition-transform" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>

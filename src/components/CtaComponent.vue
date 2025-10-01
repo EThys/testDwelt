@@ -1,7 +1,7 @@
 <template>
   <div class="mt-20 relative">
     <!-- Conteneur principal avec effet de verre amélioré -->
-    <div class="relative bg-gradient-to-br from-gray-900 via-[#1a5f5f] to-[#329393] p-8 md:p-12 text-center text-white shadow-2xl overflow-hidden border border-white/10 backdrop-blur-sm">
+    <div class="relative bg-gradient-to-br from-gray-900 via-[#1a5f5f] to-[#2F4F4F] p-8 md:p-12 text-center text-white shadow-2xl overflow-hidden border border-white/10 backdrop-blur-sm">
       
       <!-- Éléments décoratifs animés en arrière-plan -->
       <div class="absolute inset-0 overflow-hidden">
@@ -84,7 +84,7 @@
            :class="showForm ? 'scale-100 opacity-100' : ''">
         
         <!-- Header du modal -->
-        <div class="bg-gradient-to-r from-[#329393] to-[#1a5f5f] p-6 text-white relative">
+        <div class="bg-gradient-to-r from-[#2F4F4F] to-[#1a5f5f] p-6 text-white relative">
           <button 
             @click="showForm = false"
             class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-colors cursor-pointer"
@@ -108,11 +108,11 @@
             <div>
               <label class="block text-lg font-semibold text-gray-800 mb-3">Type de demande *</label>
               <select 
-                v-model="formData.requestType" 
-                @blur="validateField('requestType')"
+                v-model="formData.type_demande" 
+                @blur="validateField('type_demande')"
                 :class="[
-                  'w-full p-4 border-2 rounded-lg focus:border-[#329393] focus:ring-2 focus:ring-[#329393]/20 transition-all duration-300 bg-white cursor-pointer',
-                  errors.requestType ? 'border-red-500' : 'border-gray-200'
+                  'w-full p-4 border-2 rounded-lg focus:border-[#2F4F4F] focus:ring-2 focus:ring-[#2F4F4F]/20 transition-all duration-300 bg-white cursor-pointer',
+                  errors.type_demande ? 'border-red-500' : 'border-gray-200'
                 ]"
               >
                 <option value="">Sélectionner</option>
@@ -122,54 +122,54 @@
                 <option value="estimation">Estimation gratuite</option>
                 <option value="conseil">Conseil personnalisé</option>
               </select>
-              <p v-if="errors.requestType" class="text-red-500 text-sm mt-1">{{ errors.requestType }}</p>
+              <p v-if="errors.type_demande" class="text-red-500 text-sm mt-1">{{ errors.type_demande }}</p>
             </div>
 
             <!-- Informations personnelles -->
             <div>
               <label class="block text-lg font-semibold text-gray-800 mb-3">Je suis... *</label>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                <label class="flex items-center p-4 border-2 rounded-lg cursor-pointer hover:border-[#329393]/50 transition-all duration-300"
-                       :class="errors.userType ? 'border-red-500' : 'border-gray-200'">
-                  <input type="radio" v-model="formData.userType" value="particulier" class="text-[#329393] focus:ring-[#329393] cursor-pointer">
+                <label class="flex items-center p-4 border-2 rounded-lg cursor-pointer hover:border-[#2F4F4F]/50 transition-all duration-300"
+                       :class="errors.me ? 'border-red-500' : 'border-gray-200'">
+                  <input type="radio" v-model="formData.me" value="particulier" class="text-[#2F4F4F] focus:ring-[#2F4F4F] cursor-pointer">
                   <span class="ml-3 text-gray-700 font-medium">Particulier</span>
                 </label>
-                <label class="flex items-center p-4 border-2 rounded-lg cursor-pointer hover:border-[#329393]/50 transition-all duration-300"
-                       :class="errors.userType ? 'border-red-500' : 'border-gray-200'">
-                  <input type="radio" v-model="formData.userType" value="professionnel" class="text-[#329393] focus:ring-[#329393] cursor-pointer">
+                <label class="flex items-center p-4 border-2 rounded-lg cursor-pointer hover:border-[#2F4F4F]/50 transition-all duration-300"
+                       :class="errors.me ? 'border-red-500' : 'border-gray-200'">
+                  <input type="radio" v-model="formData.me" value="professionnel" class="text-[#2F4F4F] focus:ring-[#2F4F4F] cursor-pointer">
                   <span class="ml-3 text-gray-700 font-medium">Professionnel</span>
                 </label>
               </div>
-              <p v-if="errors.userType" class="text-red-500 text-sm mt-1 -mt-4 mb-4">{{ errors.userType }}</p>
+              <p v-if="errors.me" class="text-red-500 text-sm mt-1 -mt-4 mb-4">{{ errors.me }}</p>
 
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label class="block text-sm font-medium text-gray-700 mb-2">Prénom *</label>
                   <input 
                     type="text" 
-                    v-model="formData.firstName"
-                    @blur="validateField('firstName')"
+                    v-model="formData.firstname"
+                    @blur="validateField('firstname')"
                     :class="[
-                      'w-full p-4 border-2 rounded-lg focus:border-[#329393] focus:ring-2 focus:ring-[#329393]/20 transition-all duration-300 cursor-text',
-                      errors.firstName ? 'border-red-500' : 'border-gray-200'
+                      'w-full p-4 border-2 rounded-lg focus:border-[#2F4F4F] focus:ring-2 focus:ring-[#2F4F4F]/20 transition-all duration-300 cursor-text',
+                      errors.firstname ? 'border-red-500' : 'border-gray-200'
                     ]"
                     placeholder="Votre prénom"
                   >
-                  <p v-if="errors.firstName" class="text-red-500 text-sm mt-1">{{ errors.firstName }}</p>
+                  <p v-if="errors.firstname" class="text-red-500 text-sm mt-1">{{ errors.firstname }}</p>
                 </div>
                 <div>
                   <label class="block text-sm font-medium text-gray-700 mb-2">Nom *</label>
                   <input 
                     type="text" 
-                    v-model="formData.lastName"
-                    @blur="validateField('lastName')"
+                    v-model="formData.lastname"
+                    @blur="validateField('lastname')"
                     :class="[
-                      'w-full p-4 border-2 rounded-lg focus:border-[#329393] focus:ring-2 focus:ring-[#329393]/20 transition-all duration-300 cursor-text',
-                      errors.lastName ? 'border-red-500' : 'border-gray-200'
+                      'w-full p-4 border-2 rounded-lg focus:border-[#2F4F4F] focus:ring-2 focus:ring-[#2F4F4F]/20 transition-all duration-300 cursor-text',
+                      errors.lastname ? 'border-red-500' : 'border-gray-200'
                     ]"
                     placeholder="Votre nom"
                   >
-                  <p v-if="errors.lastName" class="text-red-500 text-sm mt-1">{{ errors.lastName }}</p>
+                  <p v-if="errors.lastname" class="text-red-500 text-sm mt-1">{{ errors.lastname }}</p>
                 </div>
               </div>
 
@@ -180,7 +180,7 @@
                   v-model="formData.email"
                   @blur="validateField('email')"
                   :class="[
-                    'w-full p-4 border-2 rounded-lg focus:border-[#329393] focus:ring-2 focus:ring-[#329393]/20 transition-all duration-300 cursor-text',
+                    'w-full p-4 border-2 rounded-lg focus:border-[#2F4F4F] focus:ring-2 focus:ring-[#2F4F4F]/20 transition-all duration-300 cursor-text',
                     errors.email ? 'border-red-500' : 'border-gray-200'
                   ]"
                   placeholder="votre@email.com"
@@ -191,7 +191,7 @@
 
             <!-- Localisation -->
             <div>
-              <label class="block text-lg font-semibold text-gray-800 mb-3">Localisation *</label>
+              <label class="block text-lg font-semibold text-gray-800 mb-3">Localisation</label>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label class="block text-sm font-medium text-gray-700 mb-2">Ville *</label>
@@ -200,7 +200,7 @@
                     v-model="formData.city"
                     @blur="validateField('city')"
                     :class="[
-                      'w-full p-4 border-2 rounded-lg focus:border-[#329393] focus:ring-2 focus:ring-[#329393]/20 transition-all duration-300 cursor-text',
+                      'w-full p-4 border-2 rounded-lg focus:border-[#2F4F4F] focus:ring-2 focus:ring-[#2F4F4F]/20 transition-all duration-300 cursor-text',
                       errors.city ? 'border-red-500' : 'border-gray-200'
                     ]"
                     placeholder="Votre ville"
@@ -208,31 +208,30 @@
                   <p v-if="errors.city" class="text-red-500 text-sm mt-1">{{ errors.city }}</p>
                 </div>
                 <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-2">Code postal *</label>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Code postal</label>
                   <input 
                     type="text" 
-                    v-model="formData.zipCode"
-                    @blur="validateField('zipCode')"
-                    :class="[
-                      'w-full p-4 border-2 rounded-lg focus:border-[#329393] focus:ring-2 focus:ring-[#329393]/20 transition-all duration-300 cursor-text',
-                      errors.zipCode ? 'border-red-500' : 'border-gray-200'
-                    ]"
-                    placeholder="Code postal"
+                    v-model="formData.code_postal"
+                    class="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-[#2F4F4F] focus:ring-2 focus:ring-[#2F4F4F]/20 transition-all duration-300 cursor-text"
+                    placeholder="Code postal (optionnel)"
                   >
-                  <p v-if="errors.zipCode" class="text-red-500 text-sm mt-1">{{ errors.zipCode }}</p>
                 </div>
               </div>
             </div>
 
             <!-- Propriété -->
             <div>
-              <label class="block text-lg font-semibold text-gray-800 mb-3">Propriété</label>
+              <label class="block text-lg font-semibold text-gray-800 mb-3">Propriété *</label>
               
               <div class="mb-6">
-                <label class="block text-sm font-medium text-gray-700 mb-2">Type de bien</label>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Type de bien *</label>
                 <select 
-                  v-model="formData.propertyType" 
-                  class="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-[#329393] focus:ring-2 focus:ring-[#329393]/20 transition-all duration-300 cursor-pointer"
+                  v-model="formData.type_bien" 
+                  @blur="validateField('type_bien')"
+                  :class="[
+                    'w-full p-4 border-2 rounded-lg focus:border-[#2F4F4F] focus:ring-2 focus:ring-[#2F4F4F]/20 transition-all duration-300 cursor-pointer',
+                    errors.type_bien ? 'border-red-500' : 'border-gray-200'
+                  ]"
                 >
                   <option value="">Sélectionner</option>
                   <option value="maison">Maison individuelle</option>
@@ -241,16 +240,17 @@
                   <option value="commercial">Local commercial</option>
                   <option value="terrain">Terrain</option>
                 </select>
+                <p v-if="errors.type_bien" class="text-red-500 text-sm mt-1">{{ errors.type_bien }}</p>
               </div>
 
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-2">Prix maximum (€)</label>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Prix maximum ($)</label>
                   <input 
                     type="number" 
-                    v-model="formData.maxPrice"
-                    class="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-[#329393] focus:ring-2 focus:ring-[#329393]/20 transition-all duration-300 cursor-text"
-                    placeholder="Budget maximum"
+                    v-model="formData.price_max"
+                    class="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-[#2F4F4F] focus:ring-2 focus:ring-[#2F4F4F]/20 transition-all duration-300 cursor-text"
+                    placeholder="Budget maximum en dollars"
                     min="0"
                   >
                 </div>
@@ -258,8 +258,8 @@
                   <label class="block text-sm font-medium text-gray-700 mb-2">Surface minimum (m²)</label>
                   <input 
                     type="number" 
-                    v-model="formData.minSize"
-                    class="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-[#329393] focus:ring-2 focus:ring-[#329393]/20 transition-all duration-300 cursor-text"
+                    v-model="formData.surface"
+                    class="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-[#2F4F4F] focus:ring-2 focus:ring-[#2F4F4F]/20 transition-all duration-300 cursor-text"
                     placeholder="Surface minimum"
                     min="0"
                   >
@@ -271,8 +271,8 @@
                   <label class="block text-sm font-medium text-gray-700 mb-2">Nombre de chambres</label>
                   <input 
                     type="number" 
-                    v-model="formData.bedrooms"
-                    class="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-[#329393] focus:ring-2 focus:ring-[#329393]/20 transition-all duration-300 cursor-text"
+                    v-model="formData.room"
+                    class="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-[#2F4F4F] focus:ring-2 focus:ring-[#2F4F4F]/20 transition-all duration-300 cursor-text"
                     placeholder="Nb. chambres"
                     min="0"
                   >
@@ -281,8 +281,8 @@
                   <label class="block text-sm font-medium text-gray-700 mb-2">Nombre de salles de bain</label>
                   <input 
                     type="number" 
-                    v-model="formData.bathrooms"
-                    class="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-[#329393] focus:ring-2 focus:ring-[#329393]/20 transition-all duration-300 cursor-text"
+                    v-model="formData.salle_bain"
+                    class="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-[#2F4F4F] focus:ring-2 focus:ring-[#2F4F4F]/20 transition-all duration-300 cursor-text"
                     placeholder="Nb. salles de bain"
                     min="0"
                   >
@@ -294,9 +294,9 @@
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-2">Message supplémentaire</label>
               <textarea 
-                v-model="formData.message"
+                v-model="formData.description"
                 rows="4"
-                class="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-[#329393] focus:ring-2 focus:ring-[#329393]/20 transition-all duration-300 resize-none cursor-text"
+                class="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-[#2F4F4F] focus:ring-2 focus:ring-[#2F4F4F]/20 transition-all duration-300 resize-none cursor-text"
                 placeholder="Décrivez vos besoins spécifiques..."
               ></textarea>
             </div>
@@ -305,16 +305,24 @@
             <div class="flex items-start space-x-3">
               <input 
                 type="checkbox" 
-                v-model="formData.gdprConsent"
-                @change="validateField('gdprConsent')"
-                class="mt-1 text-[#329393] focus:ring-[#329393] rounded cursor-pointer"
+                v-model="formData.is_allow"
+                @change="validateField('is_allow')"
+                class="mt-1 text-[#2F4F4F] focus:ring-[#2F4F4F] rounded cursor-pointer"
               >
               <label class="text-sm text-gray-600 cursor-pointer">
                 J'accepte que mes données soient utilisées pour traiter ma demande conformément à la 
-                <a href="#" class="text-[#329393] hover:underline">politique de confidentialité</a>.
+                <a href="#" class="text-[#2F4F4F] hover:underline">politique de confidentialité</a>.
               </label>
             </div>
-            <p v-if="errors.gdprConsent" class="text-red-500 text-sm mt-1">{{ errors.gdprConsent }}</p>
+            <p v-if="errors.is_allow" class="text-red-500 text-sm mt-1">{{ errors.is_allow }}</p>
+
+            <!-- Résumé des erreurs -->
+            <div v-if="Object.keys(errors).some(key => errors[key])" class="bg-red-50 border border-red-200 rounded-lg p-4 mt-4">
+              <p class="text-red-800 font-medium mb-2">Veuillez corriger les erreurs suivantes :</p>
+              <ul class="text-red-700 text-sm list-disc list-inside">
+                <li v-for="error in Object.values(errors).filter(e => e)" :key="error">{{ error }}</li>
+              </ul>
+            </div>
 
             <!-- Boutons d'action -->
             <div class="flex flex-col sm:flex-row gap-4 pt-4">
@@ -328,78 +336,152 @@
               <button 
                 type="submit"
                 :disabled="!isFormValid || isSubmitting"
-                class="flex-1 px-6 py-4 bg-gradient-to-r from-[#329393] to-[#1a5f5f] text-white rounded-lg font-semibold hover:from-[#2a7a7a] hover:to-[#155050] transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none cursor-pointer"
+                :class="[
+                  'flex-1 px-6 py-4 rounded-lg font-semibold transition-all duration-300 transform',
+                  isSubmitting || !isFormValid 
+                    ? 'bg-gray-400 cursor-not-allowed text-white' 
+                    : 'bg-gradient-to-r from-[#2F4F4F] to-[#1a5f5f] text-white hover:from-[#2a7a7a] hover:to-[#155050] hover:scale-105 cursor-pointer'
+                ]"
               >
-                {{ isSubmitting ? 'Envoi en cours...' : 'Envoyer ma demande' }}
+                <span v-if="isSubmitting" class="flex items-center justify-center">
+                  <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Envoi en cours...
+                </span>
+                <span v-else>
+                  Envoyer ma demande
+                </span>
               </button>
             </div>
-
-            <!-- Résumé des erreurs -->
-            <div v-if="Object.keys(errors).some(key => errors[key])" class="bg-red-50 border border-red-200 rounded-lg p-4 mt-4">
-              <p class="text-red-800 font-medium mb-2">Veuillez corriger les erreurs suivantes :</p>
-              <ul class="text-red-700 text-sm list-disc list-inside">
-                <li v-for="error in Object.values(errors).filter(e => e)" :key="error">{{ error }}</li>
-              </ul>
-            </div>
           </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup de notification -->
+    <div v-if="showNotification" class="fixed inset-0 z-[60] flex items-end justify-center p-4 pointer-events-none">
+      <div class="w-full max-w-md transform transition-all duration-500"
+           :class="showNotification ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'">
+        
+        <!-- Notification de succès -->
+        <div v-if="notificationType === 'success'" 
+             class="bg-green-50 border-l-4 border-green-500 p-4 rounded-lg shadow-lg pointer-events-auto mb-4 animate-slideUp">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <svg class="h-5 w-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div class="ml-3">
+              <p class="text-sm font-medium text-green-800">
+                Demande envoyée avec succès !
+              </p>
+              <p class="mt-1 text-sm text-green-600">
+                Nous avons bien reçu votre demande et nous vous contacterons rapidement.
+              </p>
+            </div>
+            <button 
+              @click="hideNotification"
+              class="ml-auto pl-3 flex-shrink-0 cursor-pointer"
+            >
+              <svg class="h-4 w-4 text-green-400 hover:text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Notification d'erreur -->
+        <div v-else-if="notificationType === 'error'"
+             class="bg-red-50 border-l-4 border-red-500 p-4 rounded-lg shadow-lg pointer-events-auto mb-4 animate-slideUp">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <svg class="h-5 w-5 text-red-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div class="ml-3">
+              <p class="text-sm font-medium text-red-800">
+                Erreur lors de l'envoi
+              </p>
+              <p class="mt-1 text-sm text-red-600">
+                {{ submitError }}
+              </p>
+            </div>
+            <button 
+              @click="hideNotification"
+              class="ml-auto pl-3 flex-shrink-0 cursor-pointer"
+            >
+              <svg class="h-4 w-4 text-red-400 hover:text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, reactive, onMounted, computed } from 'vue'
+import { useAxiosRequest } from "@/utils/custom"
 
 const showForm = ref(false)
 const counter = ref(0)
 const target = 200
 const isSubmitting = ref(false)
+const submitSuccess = ref(false)
+const submitError = ref('')
+const showNotification = ref(false)
+const notificationType = ref<'success' | 'error' | null>(null)
 
 const formData = reactive({
-  requestType: '',
-  userType: '',
-  firstName: '',
-  lastName: '',
+  type_demande: '',
+  me: '',
+  lastname: '',
+  firstname: '',
   email: '',
   city: '',
-  zipCode: '',
-  propertyType: '',
-  maxPrice: '',
-  minSize: '',
-  bedrooms: '',
-  bathrooms: '',
-  message: '',
-  gdprConsent: false
+  code_postal: '',
+  type_bien: '',
+  price_max: '',
+  room: '',
+  surface: '',
+  salle_bain: '',
+  description: '',
+  is_allow: false
 })
 
 const errors = reactive({
-  requestType: '',
-  userType: '',
-  firstName: '',
-  lastName: '',
+  type_demande: '',
+  me: '',
+  firstname: '',
+  lastname: '',
   email: '',
   city: '',
-  zipCode: '',
-  gdprConsent: ''
+  type_bien: '',
+  is_allow: ''
 })
 
 // Validation des champs
-const validateField = (fieldName) => {
+const validateField = (fieldName: string) => {
   const value = formData[fieldName]
   
   switch (fieldName) {
-    case 'requestType':
-      errors.requestType = value ? '' : 'Veuillez sélectionner un type de demande'
+    case 'type_demande':
+      errors.type_demande = value ? '' : 'Veuillez sélectionner un type de demande'
       break
-    case 'userType':
-      errors.userType = value ? '' : 'Veuillez sélectionner votre profil'
+    case 'me':
+      errors.me = value ? '' : 'Veuillez sélectionner votre profil'
       break
-    case 'firstName':
-      errors.firstName = value.length >= 2 ? '' : 'Le prénom doit contenir au moins 2 caractères'
+    case 'firstname':
+      errors.firstname = value.length >= 2 ? '' : 'Le prénom doit contenir au moins 2 caractères'
       break
-    case 'lastName':
-      errors.lastName = value.length >= 2 ? '' : 'Le nom doit contenir au moins 2 caractères'
+    case 'lastname':
+      errors.lastname = value.length >= 2 ? '' : 'Le nom doit contenir au moins 2 caractères'
       break
     case 'email':
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -408,46 +490,71 @@ const validateField = (fieldName) => {
     case 'city':
       errors.city = value.length >= 2 ? '' : 'Veuillez entrer une ville valide'
       break
-    case 'zipCode':
-      const zipRegex = /^\d{5}$/
-      errors.zipCode = zipRegex.test(value) ? '' : 'Le code postal doit contenir 5 chiffres'
+    case 'type_bien':
+      errors.type_bien = value ? '' : 'Veuillez sélectionner un type de bien'
       break
-    case 'gdprConsent':
-      errors.gdprConsent = value ? '' : 'Vous devez accepter les conditions pour continuer'
+    case 'is_allow':
+      errors.is_allow = value ? '' : 'Vous devez accepter les conditions pour continuer'
       break
   }
 }
 
 // Validation complète du formulaire
 const validateForm = () => {
-  validateField('requestType')
-  validateField('userType')
-  validateField('firstName')
-  validateField('lastName')
+  validateField('type_demande')
+  validateField('me')
+  validateField('firstname')
+  validateField('lastname')
   validateField('email')
   validateField('city')
-  validateField('zipCode')
-  validateField('gdprConsent')
+  validateField('type_bien')
+  validateField('is_allow')
   
   return !Object.values(errors).some(error => error)
 }
 
 // Computed property pour vérifier si le formulaire est valide
 const isFormValid = computed(() => {
-  return formData.requestType && 
-         formData.userType && 
-         formData.firstName.length >= 2 &&
-         formData.lastName.length >= 2 &&
+  return formData.type_demande && 
+         formData.me && 
+         formData.firstname.length >= 2 &&
+         formData.lastname.length >= 2 &&
          /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email) &&
          formData.city.length >= 2 &&
-         /^\d{5}$/.test(formData.zipCode) &&
-         formData.gdprConsent
+         formData.type_bien &&
+         formData.is_allow
 })
 
+// Fonctions pour gérer les notifications
+const showSuccessNotification = () => {
+  notificationType.value = 'success'
+  showNotification.value = true
+  setTimeout(() => {
+    hideNotification()
+  }, 5000)
+}
+
+const showErrorNotification = (message: string) => {
+  submitError.value = message
+  notificationType.value = 'error'
+  showNotification.value = true
+  setTimeout(() => {
+    hideNotification()
+  }, 5000)
+}
+
+const hideNotification = () => {
+  showNotification.value = false
+  setTimeout(() => {
+    notificationType.value = null
+    submitError.value = ''
+  }, 300)
+}
+
+// Fonction d'envoi vers l'API
 const submitForm = async () => {
   // Validation avant envoi
   if (!validateForm()) {
-    // Scroll vers le premier champ en erreur
     const firstErrorField = Object.keys(errors).find(key => errors[key])
     if (firstErrorField) {
       const element = document.querySelector(`[v-model="formData.${firstErrorField}"]`)
@@ -457,34 +564,83 @@ const submitForm = async () => {
   }
 
   isSubmitting.value = true
+  submitError.value = ''
 
   try {
-    // Simulation d'envoi du formulaire
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    console.log('Formulaire envoyé:', formData)
+    // Préparer les données pour l'API
+    const requestData = {
+      type_demande: formData.type_demande,
+      me: formData.me,
+      lastname: formData.lastname,
+      firstname: formData.firstname,
+      email: formData.email,
+      city: formData.city,
+      code_postal: formData.code_postal || null,
+      type_bien: formData.type_bien,
+      price_max: formData.price_max ? formData.price_max.toString() : null,
+      room: formData.room ? parseInt(formData.room) : null,
+      surface: formData.surface ? formData.surface.toString() : null,
+      salle_bain: formData.salle_bain ? parseInt(formData.salle_bain) : null,
+      description: formData.description || null,
+      is_allow: formData.is_allow
+    }
+
+    console.log('Envoi de la demande:', requestData)
+
+    // Envoyer la requête POST à l'API
+    const response = await useAxiosRequest().post('/demande', requestData)
+
+    // Vérifier la réponse
+    if (response.data && response.data.demande && response.data.message) {
+      // SUCCÈS
+      submitSuccess.value = true
+      
+      // Réinitialiser le formulaire
+      Object.keys(formData).forEach(key => {
+        if (key !== 'is_allow') {
+          formData[key] = ''
+        }
+        formData.is_allow = false
+      })
+      
+      // Réinitialiser les erreurs
+      Object.keys(errors).forEach(key => {
+        errors[key] = ''
+      })
+      
+      // Fermer le modal
+      showForm.value = false
+      
+      // Afficher la notification de succès
+      showSuccessNotification()
+      
+    } else {
+      // ÉCHEC
+      showErrorNotification('Erreur lors de l\'envoi de la demande - réponse API invalide')
+    }
+
+  } catch (error: any) {
+    console.error('Erreur lors de l\'envoi de la demande:', error)
     
-    // Réinitialiser le formulaire
-    Object.keys(formData).forEach(key => {
-      if (key !== 'gdprConsent') {
-        formData[key] = ''
+    // Gestion des erreurs spécifiques
+    if (error.response) {
+      const errorMessage = error.response.data?.message || 
+                          error.response.data?.error || 
+                          'Erreur serveur'
+      
+      // Gestion des erreurs de validation Laravel
+      if (error.response.status === 422 && error.response.data.errors) {
+        const validationErrors = error.response.data.errors
+        const firstError = Object.values(validationErrors)[0]
+        showErrorNotification(`Erreur de validation: ${Array.isArray(firstError) ? firstError[0] : firstError}`)
+      } else {
+        showErrorNotification(`Erreur: ${errorMessage}`)
       }
-      formData.gdprConsent = false
-    })
-    
-    // Réinitialiser les erreurs
-    Object.keys(errors).forEach(key => {
-      errors[key] = ''
-    })
-    
-    // Fermer le modal
-    showForm.value = false
-    
-    // Notification de succès
-    alert('Votre demande a été envoyée avec succès ! Nous vous contacterons rapidement.')
-    
-  } catch (error) {
-    console.error('Erreur lors de l\'envoi:', error)
-    alert('Une erreur est survenue. Veuillez réessayer.')
+    } else if (error.request) {
+      showErrorNotification('Impossible de contacter le serveur. Vérifiez votre connexion internet.')
+    } else {
+      showErrorNotification('Une erreur inattendue est survenue lors de l\'envoi')
+    }
   } finally {
     isSubmitting.value = false
   }
@@ -510,7 +666,38 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* Animations améliorées */
+/* Animation pour la notification */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Autres styles existants... */
 @keyframes gradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -570,7 +757,7 @@ input[type="radio"] + span {
 }
 
 input[type="radio"]:checked + span {
-  color: #329393;
+  color: #2F4F4F;
   font-weight: 600;
 }
 

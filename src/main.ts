@@ -8,6 +8,10 @@ import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
+import '@n8n/chat/style.css';
+import '../src/chatBot.css'
+import vue3dLoader from "vue-3d-loader";
+
 
 const app = createApp(App)
 
@@ -21,8 +25,7 @@ const vuetify = createVuetify({
 //@ts-ignore
 app.use(PerfectScrollbar)
 app.use(vuetify)
-
-
+app.use(vue3dLoader)
 app.mount('#app')
 
 

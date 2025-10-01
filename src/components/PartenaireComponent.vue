@@ -151,12 +151,12 @@ onUnmounted(() => {
     <!-- Arrière-plan élégant -->
     <div class="absolute inset-0 overflow-hidden">
       <!-- Formes géométriques subtiles -->
-      <div class="absolute top-10 left-10 w-72 h-72 bg-[#329393]/5 rounded-full blur-3xl animate-pulse-slow"></div>
+      <div class="absolute top-10 left-10 w-72 h-72 bg-[#2F4F4F]/5 rounded-full blur-3xl animate-pulse-slow"></div>
       <div class="absolute bottom-10 right-10 w-80 h-80 bg-[#05b1b1]/5 rounded-full blur-3xl animate-pulse-slower"></div>
       
       <!-- Lignes décoratives -->
       <div class="absolute inset-0 opacity-5">
-        <div class="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#329393] to-transparent"></div>
+        <div class="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#2F4F4F] to-transparent"></div>
         <div class="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#05b1b1] to-transparent"></div>
       </div>
     </div>
@@ -166,7 +166,7 @@ onUnmounted(() => {
       <div class="text-center mb-16 lg:mb-20">
         <!-- Badge sophistiqué -->
         <div class="scroll-animate-title">
-          <span class="inline-block bg-gradient-to-r from-[#329393]/10 to-[#05b1b1]/10 text-[#329393] text-sm font-semibold px-4 py-2 rounded-full border border-[#329393]/20 backdrop-blur-sm mb-6">
+          <span class="inline-block bg-gradient-to-r from-[#2F4F4F]/10 to-[#05b1b1]/10 text-[#2F4F4F] text-sm font-semibold px-4 py-2 rounded-full border border-[#2F4F4F]/20 backdrop-blur-sm mb-6">
             Partenariats stratégiques
           </span>
         </div>
@@ -174,16 +174,16 @@ onUnmounted(() => {
         <!-- Titre principal avec effet de gradient -->
         <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight scroll-animate-title delay-100">
           Nos partenaires 
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#329393] to-[#05b1b1] relative inline-block">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#2F4F4F] to-[#05b1b1] relative inline-block">
             d'excellence
-            <span class="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-[#329393] to-[#05b1b1] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></span>
+            <span class="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-[#2F4F4F] to-[#05b1b1] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></span>
           </span>
         </h2>
         
         <!-- Description -->
         <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed scroll-animate-subtitle">
           Des collaborations solides avec des leaders du secteur pour garantir 
-          <span class="font-semibold text-[#329393]">la qualité et l'innovation</span> dans tous nos projets
+          <span class="font-semibold text-[#2F4F4F]">la qualité et l'innovation</span> dans tous nos projets
         </p>
       </div>
 
@@ -210,20 +210,20 @@ onUnmounted(() => {
                   :href="partner.website"
                   target="_blank"
                   rel="noopener"
-                  class="relative flex flex-col items-center justify-center bg-white/95 backdrop-blur-xl rounded-3xl p-8 lg:p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 border-2 border-white/60 hover:border-[#329393]/30 w-64 lg:w-72 xl:w-80 min-h-[280px]"
+                  class="relative flex flex-col items-center justify-center bg-white/95 backdrop-blur-xl rounded-3xl p-8 lg:p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 border-2 border-white/60 hover:border-[#2F4F4F]/30 w-64 lg:w-72 xl:w-80 min-h-[280px]"
                   :class="{
-                    'scale-105 border-[#329393]/40 shadow-3xl': partner.featured
+                    'scale-105 border-[#2F4F4F]/40 shadow-3xl': partner.featured
                   }"
                 >
                   <!-- Effet de halo pour l'élément featured -->
                   <div 
                     v-if="partner.featured"
-                    class="absolute inset-0 bg-gradient-to-br from-[#329393]/10 to-[#05b1b1]/10 rounded-3xl opacity-60"
+                    class="absolute inset-0 bg-gradient-to-br from-[#2F4F4F]/10 to-[#05b1b1]/10 rounded-3xl opacity-60"
                   ></div>
                   
                   <!-- Badge de catégorie -->
                   <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 z-20">
-                    <span class="bg-gradient-to-r from-[#329393] to-[#05b1b1] text-white text-sm font-bold px-4 py-2 rounded-full shadow-lg transform group-hover:scale-105 transition-transform duration-300">
+                    <span class="bg-gradient-to-r from-[#2F4F4F] to-[#05b1b1] text-white text-sm font-bold px-4 py-2 rounded-full shadow-lg transform group-hover:scale-105 transition-transform duration-300">
                       {{ partner.category }}
                     </span>
                   </div>
@@ -263,7 +263,7 @@ onUnmounted(() => {
 
                 <!-- Effet d'ombre portée pour la profondeur -->
                 <div 
-                  class="absolute inset-0 bg-gradient-to-br from-[#329393]/20 to-[#05b1b1]/20 rounded-3xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"
+                  class="absolute inset-0 bg-gradient-to-br from-[#2F4F4F]/20 to-[#05b1b1]/20 rounded-3xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"
                   :class="{ 'opacity-30': partner.featured }"
                 ></div>
               </div>
@@ -283,10 +283,10 @@ onUnmounted(() => {
             <div 
               class="w-4 h-4 rounded-full transition-all duration-300 border-2"
               :class="index === currentIndex ? 
-                'bg-[#329393] border-[#329393] scale-125' : 
-                'bg-transparent border-gray-300 hover:border-[#329393]'"
+                'bg-[#2F4F4F] border-[#2F4F4F] scale-125' : 
+                'bg-transparent border-gray-300 hover:border-[#2F4F4F]'"
             ></div>
-            <div class="absolute inset-0 w-4 h-4 rounded-full bg-[#329393] opacity-0 group-hover:opacity-20 transition-opacity duration-300 scale-150"></div>
+            <div class="absolute inset-0 w-4 h-4 rounded-full bg-[#2F4F4F] opacity-0 group-hover:opacity-20 transition-opacity duration-300 scale-150"></div>
           </button>
         </div>
 
